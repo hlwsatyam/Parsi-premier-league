@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { FloatingButtons } from './components/FloatingButtons';
 import { AnnouncementBar } from './components/AnnouncementBar';
+import { PopupModal } from './components/PopupModal';
 import { Home } from './pages/Home';
 import { Teams } from './pages/Teams';
 import { Tournaments } from './pages/Tournaments';
@@ -50,6 +51,7 @@ export default function App() {
 
         <Footer />
         <FloatingButtons />
+        <PopupModal />
       </div>
     </Router>
   );

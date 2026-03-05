@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Trophy, Users, Calendar, Star, ArrowRight, Shield, Zap, Target as TargetIcon } from 'lucide-react';
+import { Trophy, Users, Calendar, Star, ArrowRight, Shield, Zap, Target as TargetIcon, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { TEAMS } from '../constants';
@@ -62,7 +62,8 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Why PPL Section */}
-      <section className="py-32 bg-zinc-950/50 relative">
+      <section className="py-32 bg-zinc-950/50 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] -z-10" />
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-24">
             <h2 className="text-5xl md:text-7xl font-black text-white mb-6">WHY <span className="text-gradient">PPL?</span></h2>
@@ -89,6 +90,132 @@ export const Home: React.FC = () => {
                 <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tournament Format Section */}
+      <section className="py-32 relative bg-linear-to-b from-zinc-950 via-zinc-900 to-zinc-950">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-8">TOURNAMENT <br /><span className="text-gradient">FORMAT</span></h2>
+              <div className="space-y-8">
+                {[
+                  { title: 'Group Stage', desc: '8 teams divided into 2 groups. Each team plays 3 matches in a round-robin format.' },
+                  { title: 'Knockouts', desc: 'Top 2 teams from each group advance to the Semi-Finals.' },
+                  { title: 'Grand Finale', desc: 'The ultimate showdown between the two best teams for the PPL Trophy.' },
+                ].map((step, i) => (
+                  <div key={i} className="flex gap-6">
+                    <div className="text-4xl font-black text-white/10">0{i + 1}</div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">{step.title}</h4>
+                      <p className="text-zinc-500">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="glass p-12 rounded-[3rem] border-primary/20 relative"
+            >
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-secondary/20 blur-[60px]" />
+              <h3 className="text-3xl font-black text-white mb-8 text-center">PRIZE <span className="text-gradient">POOL</span></h3>
+              <div className="space-y-6">
+                <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex justify-between items-center">
+                  <span className="text-zinc-400 font-bold uppercase tracking-widest">Winner</span>
+                  <span className="text-3xl font-black text-primary">₹ 51,000</span>
+                </div>
+                <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex justify-between items-center">
+                  <span className="text-zinc-400 font-bold uppercase tracking-widest">Runner Up</span>
+                  <span className="text-3xl font-black text-white">₹ 21,000</span>
+                </div>
+                <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex justify-between items-center">
+                  <span className="text-zinc-400 font-bold uppercase tracking-widest">Man of Series</span>
+                  <span className="text-2xl font-black text-secondary">Premium Kit</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Venue & Schedule Section */}
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/5 blur-[120px] -z-10" />
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
+              <h2 className="text-5xl font-black text-white mb-12">MATCH <span className="text-gradient">SCHEDULE</span></h2>
+              <div className="space-y-4">
+                {[
+                  { date: 'April 15', match: 'Mairwa Super Kings vs Star XI', time: '10:00 AM', type: 'Inaugural' },
+                  { date: 'April 16', match: 'Bengal Tigers vs Siwan Knight Riders', time: '02:00 PM', type: 'Group A' },
+                  { date: 'April 17', match: 'Star XI vs Bengal Tigers', time: '10:00 AM', type: 'Group B' },
+                  { date: 'April 18', match: 'Siwan Knight Riders vs Mairwa Super Kings', time: '02:00 PM', type: 'Group A' },
+                ].map((item, i) => (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="glass p-6 rounded-2xl flex flex-wrap items-center justify-between gap-6 hover:bg-white/10 transition-colors"
+                  >
+                    <div className="flex items-center gap-6">
+                      <div className="bg-primary/20 text-primary px-4 py-2 rounded-xl font-black text-center min-w-[80px]">
+                        <div className="text-xs uppercase">APR</div>
+                        <div className="text-2xl leading-none">{item.date.split(' ')[1]}</div>
+                      </div>
+                      <div>
+                        <div className="text-white font-bold text-lg">{item.match}</div>
+                        <div className="text-zinc-500 text-sm uppercase tracking-widest">{item.type}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-8">
+                      <div className="text-right">
+                        <div className="text-white font-black">{item.time}</div>
+                        <div className="text-zinc-500 text-xs uppercase">Panjya Ground</div>
+                      </div>
+                      <button className="bg-white/5 text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors">
+                        Details
+                      </button>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="space-y-8">
+              <h2 className="text-5xl font-black text-white mb-12">VENUE</h2>
+              <div className="glass p-8 rounded-[2.5rem] border-secondary/20">
+                <div className="aspect-square rounded-2xl overflow-hidden mb-8">
+                  <img 
+                    src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=800" 
+                    alt="Panjya Ground" 
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <h4 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                  <MapPin className="text-secondary" size={24} /> Panjya Ground
+                </h4>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-8">
+                  Our official home ground, featuring a professional turf pitch, modern seating for 5,000+ spectators, and high-intensity floodlights for night matches.
+                </p>
+                <button className="w-full glass py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-colors">
+                  Get Directions
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
