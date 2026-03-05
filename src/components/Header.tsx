@@ -35,12 +35,15 @@ export const Header: React.FC = () => {
     )}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-linear-to-br from-primary to-secondary p-2 rounded-lg group-hover:rotate-12 transition-transform">
-            <Trophy className="text-white" size={24} />
+          <div className="bg-linear-to-br from-primary to-secondary p-2.5 rounded-xl group-hover:rotate-12 transition-all shadow-lg">
+            <Trophy className="text-white" size={26} />
           </div>
-          <span className="text-2xl font-black tracking-tighter text-white">
-            PPL <span className="text-primary">LEAGUE</span>
-          </span>
+          <div className="flex flex-col -space-y-1">
+            <span className="text-2xl font-black tracking-tighter text-white leading-none">
+              PARSI <span className="text-primary">PREMIER</span>
+            </span>
+            <span className="text-[10px] font-bold tracking-[0.4em] text-zinc-500 uppercase">League Season 6</span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

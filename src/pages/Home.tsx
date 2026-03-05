@@ -1,57 +1,95 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Trophy, Users, Calendar, Star, ArrowRight } from 'lucide-react';
+import { Trophy, Users, Calendar, Star, ArrowRight, Shield, Zap, Target as TargetIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { TEAMS } from '../constants';
 import { ContactForm } from '../components/ContactForm';
 
 export const Home: React.FC = () => {
   return (
     <div className="pt-20">
+      <Helmet>
+        <title>PPL Season 6 | Parsi & Panjya Premier League Official</title>
+        <meta name="description" content="Welcome to the official home of Parsi Premier League and Panjya Premier League. Register your team for Season 6 and join the elite cricket competition." />
+      </Helmet>
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/stadium/1920/1080?blur=5')] bg-cover bg-center opacity-20" />
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-zinc-950/50 to-zinc-950" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 hero-mesh">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-zinc-950/80 to-zinc-950" />
         
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-block bg-white/5 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full mb-8"
+            className="inline-block bg-white/5 backdrop-blur-md border border-white/10 px-8 py-3 rounded-full mb-10"
           >
-            <span className="text-primary font-bold tracking-widest uppercase text-sm">Panjya Premier League Season 6</span>
+            <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs">Parsi & Panjya Premier League Season 6</span>
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white mb-8 leading-none"
+            className="text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter text-white mb-10 leading-[0.85]"
           >
-            WHERE <span className="text-gradient">LEGENDS</span> <br /> ARE BORN
+            THE <span className="text-gradient">ULTIMATE</span> <br /> CRICKET SAGA
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-zinc-400 mb-14 max-w-3xl mx-auto leading-relaxed font-light"
           >
-            Experience the thrill of the most prestigious cricket tournament in the region. Join us for a season of unforgettable moments and fierce competition.
+            Witness the grandest stage of cricket in Siwan. Parsi Premier League brings together the finest athletes, the most passionate fans, and an atmosphere that defines excellence.
           </motion.p>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-6"
+            className="flex flex-wrap justify-center gap-8"
           >
-            <Link to="/tournaments" className="bg-linear-to-r from-primary to-secondary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2">
-              View Tournaments <ArrowRight size={20} />
+            <Link to="/tournaments" className="bg-linear-to-r from-primary to-secondary text-white px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-[0_0_30px_rgba(242,125,38,0.3)] flex items-center gap-3">
+              Explore Season 6 <ArrowRight size={24} />
             </Link>
-            <Link to="/teams" className="glass text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-colors">
-              Our Teams
+            <Link to="/contact" className="glass text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white/10 transition-all border-white/20">
+              Register Now
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Why PPL Section */}
+      <section className="py-32 bg-zinc-950/50 relative">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-24">
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-6">WHY <span className="text-gradient">PPL?</span></h2>
+            <p className="text-zinc-500 max-w-2xl mx-auto text-lg">Setting the gold standard for regional cricket tournaments since 2018.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              { icon: Shield, title: 'Professional Standards', desc: 'International standard pitch, professional umpiring, and real-time digital scoring for every single match.' },
+              { icon: Zap, title: 'Massive Exposure', desc: 'Live streaming on YouTube and Facebook with professional commentary reaching over 50,000 viewers.' },
+              { icon: TargetIcon, title: 'Talent Scouting', desc: 'A platform where local players get noticed by state-level scouts and professional clubs.' },
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="glass-card p-10 rounded-[2.5rem] text-left"
+              >
+                <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                  <item.icon className="text-primary" size={32} />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

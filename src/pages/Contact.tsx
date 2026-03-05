@@ -1,17 +1,24 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircle, Share2, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { CONTACT_INFO } from '../constants';
 import { ContactForm } from '../components/ContactForm';
 
 export const Contact: React.FC = () => {
   return (
     <div className="pt-32 pb-20">
+      <Helmet>
+        <title>Contact PPL | Join Parsi & Panjya Premier League</title>
+        <meta name="description" content="Get in touch with the Parsi Premier League organizers. Register your team, inquire about sponsorship, or join as a volunteer." />
+      </Helmet>
+      
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
-          <h1 className="text-6xl font-black text-white mb-6">CONTACT <span className="text-gradient">US</span></h1>
-          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
-            Have questions? We're here to help you join the PPL family.
+          <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Get in Touch</div>
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-6">REACH <span className="text-gradient">OUT</span></h1>
+          <p className="text-zinc-400 max-w-3xl mx-auto text-xl font-light leading-relaxed">
+            Whether you're a player, a sponsor, or a fan, we'd love to hear from you. Our team is available on WhatsApp and phone for instant support.
           </p>
         </div>
 
