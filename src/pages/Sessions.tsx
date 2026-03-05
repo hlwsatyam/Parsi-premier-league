@@ -1,19 +1,23 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Clock, MapPin, Target } from 'lucide-react';
+import { Clock, MapPin, Target, Users } from 'lucide-react';
 
 export const Sessions: React.FC = () => {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] -z-10" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary/5 blur-[120px] -z-10" />
+      
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
+          <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Training Grounds</div>
           <h1 className="text-6xl font-black text-white mb-6">PRACTICE <span className="text-gradient">SESSIONS</span></h1>
           <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
-            Training schedules and open sessions for players and teams.
+            Training schedules and open sessions for players and teams. Get ready for the big stage.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
           {[
             { title: 'Morning Drills', time: '06:00 AM - 09:00 AM', focus: 'Fitness & Fielding', team: 'Open Session' },
             { title: 'Net Practice', time: '10:00 AM - 01:00 PM', focus: 'Batting & Bowling', team: 'Bengal Tigers' },
@@ -25,7 +29,7 @@ export const Sessions: React.FC = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="glass p-8 rounded-3xl flex gap-8 items-center"
+              className="glass p-8 rounded-3xl flex gap-8 items-center hover:bg-white/10 transition-colors"
             >
               <div className="bg-primary/10 p-6 rounded-2xl">
                 <Clock className="text-primary" size={32} />
@@ -46,6 +50,27 @@ export const Sessions: React.FC = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Coaching Staff Section */}
+        <section className="py-20 bg-zinc-900/50 rounded-[3rem] p-12 border border-white/5">
+          <h2 className="text-4xl font-black text-white mb-12 text-center">COACHING <span className="text-gradient">STAFF</span></h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { name: 'Coach Sharma', role: 'Head Coach', exp: '15+ Years' },
+              { name: 'Coach Verma', role: 'Bowling Coach', exp: '10+ Years' },
+              { name: 'Coach Gupta', role: 'Fitness Trainer', exp: '8+ Years' },
+            ].map((coach, i) => (
+              <div key={i} className="glass p-8 rounded-2xl text-center group">
+                <div className="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Users className="text-primary" size={40} />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-1">{coach.name}</h4>
+                <div className="text-primary text-sm font-bold uppercase tracking-widest mb-4">{coach.role}</div>
+                <div className="text-zinc-500 text-xs">Experience: {coach.exp}</div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

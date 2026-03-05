@@ -6,7 +6,10 @@ import { Trophy, Users, Star } from 'lucide-react';
 
 export const Teams: React.FC = () => {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] -z-10" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[120px] -z-10" />
+      
       <Helmet>
         <title>PPL Teams | Parsi & Panjya Premier League Squads</title>
         <meta name="description" content="View all teams competing in Parsi Premier League Season 6. From Mairwa Super Kings to Bengal Tigers, explore the elite squads." />
@@ -21,7 +24,7 @@ export const Teams: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-32">
           {TEAMS.map((team, i) => (
             <motion.div
               key={team.id}
@@ -72,6 +75,36 @@ export const Teams: React.FC = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Scouting Section */}
+        <section className="py-20 bg-linear-to-r from-primary/10 to-transparent rounded-[3rem] p-12 border border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-black text-white mb-6">TALENT <span className="text-gradient">SCOUTING</span></h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+                Our scouts are constantly looking for the next big star. If you have the skills, we have the platform. Join our open trials and get a chance to be picked by one of the elite PPL teams.
+              </p>
+              <div className="flex gap-4">
+                <div className="bg-white/5 p-6 rounded-2xl border border-white/5 flex-1">
+                  <div className="text-primary font-black text-2xl mb-1">100+</div>
+                  <div className="text-zinc-500 text-xs uppercase tracking-widest">Players Scouted</div>
+                </div>
+                <div className="bg-white/5 p-6 rounded-2xl border border-white/5 flex-1">
+                  <div className="text-white font-black text-2xl mb-1">20+</div>
+                  <div className="text-zinc-500 text-xs uppercase tracking-widest">State Players</div>
+                </div>
+              </div>
+            </div>
+            <div className="aspect-video rounded-3xl overflow-hidden glass">
+              <img 
+                src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=1000" 
+                alt="Scouting" 
+                className="w-full h-full object-cover opacity-50"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

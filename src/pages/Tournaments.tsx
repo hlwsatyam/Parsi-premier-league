@@ -6,7 +6,10 @@ import { TOURNAMENTS } from '../constants';
 
 export const Tournaments: React.FC = () => {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-primary/5 blur-[150px] -z-10" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-secondary/5 blur-[100px] -z-10" />
+      
       <Helmet>
         <title>PPL Tournaments | Parsi & Panjya Premier League History</title>
         <meta name="description" content="Explore the history of Parsi Premier League tournaments. From Season 1 to the upcoming Season 6, see the winners and highlights." />
@@ -21,14 +24,14 @@ export const Tournaments: React.FC = () => {
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-12 mb-32">
           {TOURNAMENTS.map((t, i) => (
             <motion.div
               key={t.id}
               initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-12 items-center"
+              className="glass p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-12 items-center hover:bg-white/10 transition-colors"
             >
               <div className="w-full md:w-1/3">
                 <div className="aspect-square bg-linear-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center relative">
@@ -62,6 +65,25 @@ export const Tournaments: React.FC = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Hall of Fame Section */}
+        <section className="py-20 bg-zinc-900/50 rounded-[3rem] p-12 border border-white/5 relative overflow-hidden">
+          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 blur-[100px]" />
+          <h2 className="text-4xl font-black text-white mb-12 text-center">HALL OF <span className="text-gradient">FAME</span></h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { year: '2023', winner: 'Bengal Tigers', mvp: 'Rahul Kumar' },
+              { year: '2022', winner: 'Star XI', mvp: 'Amit Singh' },
+              { year: '2021', winner: 'Mairwa Super Kings', mvp: 'Sanjay Yadav' },
+            ].map((item, i) => (
+              <div key={i} className="glass p-8 rounded-2xl text-center">
+                <div className="text-primary font-black text-2xl mb-2">{item.year}</div>
+                <div className="text-white font-bold text-lg mb-1">{item.winner}</div>
+                <div className="text-zinc-500 text-xs uppercase tracking-widest">MVP: {item.mvp}</div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

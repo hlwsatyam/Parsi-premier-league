@@ -6,7 +6,10 @@ import { CONTACT_INFO } from '../constants';
 
 export const About: React.FC = () => {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 relative overflow-hidden">
+      <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-primary/5 blur-[150px] -z-10" />
+      <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-secondary/5 blur-[150px] -z-10" />
+      
       <Helmet>
         <title>About PPL | History of Parsi & Panjya Premier League</title>
         <meta name="description" content="Discover the history, mission, and values of Parsi Premier League. Learn how we became the leading cricket tournament in Bihar." />
