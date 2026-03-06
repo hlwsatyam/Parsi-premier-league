@@ -42,6 +42,11 @@ export const Teams: React.FC = () => {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-zinc-950/20 to-transparent" />
+                {team.id === 'bengal-tigers' && (
+                  <div className="absolute top-6 right-6 bg-primary text-white text-xs font-bold px-4 py-2 rounded-full shadow-xl flex items-center gap-2 z-10">
+                    <Trophy size={14} /> Defending Champion
+                  </div>
+                )}
                 <div className="absolute bottom-8 left-8">
                   <h3 className="text-4xl font-black text-white tracking-tighter">{team.name}</h3>
                 </div>

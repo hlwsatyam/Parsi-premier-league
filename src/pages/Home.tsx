@@ -268,13 +268,18 @@ export const Home: React.FC = () => {
                 transition={{ delay: i * 0.1 }}
                 className="group relative"
               >
-                <div className="aspect-square rounded-3xl overflow-hidden glass mb-6">
+                <div className="aspect-square rounded-3xl overflow-hidden glass mb-6 relative">
                   <img 
                     src={team.logo} 
                     alt={team.name} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
+                  {team.id === 'bengal-tigers' && (
+                    <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                      <Trophy size={10} /> Champion
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">{team.name}</h3>
                 <p className="text-zinc-500 text-sm line-clamp-2">{team.description}</p>
