@@ -31,26 +31,35 @@ export const TEAMS = [
 
 export const TOURNAMENTS = [
   {
+    id: 'ppl-season-7',
+    name: 'PPL Season 7',
+    year: '2025',
+    status: 'Upcoming',
+    description: 'The biggest season yet, featuring 10 teams and a massive prize pool.'
+  },
+  {
     id: 'ppl-season-6',
     name: 'PPL Season 6',
     year: '2024',
-    status: 'Upcoming',
-    description: 'The biggest season yet, featuring 8 teams and a massive prize pool.'
+    status: 'Completed',
+    winner: 'Bengal Tigers',
+    description: 'A historic season that saw the Tigers claim their second title.'
   },
   {
     id: 'ppl-season-5',
     name: 'PPL Season 5',
     year: '2023',
     status: 'Completed',
-    winner: 'Bengal Tigers',
-    description: 'A historic season that saw the Tigers claim their first title.'
+    winner: 'Star XI',
+    description: 'A season of incredible upsets and rising stars.'
   }
 ];
 
 export const CONTACT_INFO = {
-  whatsapp: '+919999999999',
-  phone: '+919999999999',
-  email: 'info@ppl-league.com',
+  whatsapp: '7715836408',
+  phone: '7715836408',
+  email: 'hmansari46@gmail.com',
   address: 'Panjya Village, Siwan, Bihar',
-  organizers: ['Mithlesh Anand', 'Panjya Villagers']
+  organizers: ['Mahboob Ansari', 'Panjya Villagers'],
+  upiId: '7715836408@ybl'
 };

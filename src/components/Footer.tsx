@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
         <div>
           <h4 className="text-white font-bold uppercase tracking-widest mb-6">Tournament</h4>
           <ul className="space-y-4">
-            {['Season 6', 'Winner List', 'Player Stats', 'Gallery', 'News'].map((item) => (
+            {['Season 7', 'Winner List', 'Player Stats', 'Gallery', 'News'].map((item) => (
               <li key={item}>
                 <Link to={`/${item.toLowerCase().replace(' ', '-')}`} className="text-zinc-400 hover:text-primary transition-colors">
                   {item}

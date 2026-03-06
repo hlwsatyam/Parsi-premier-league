@@ -59,7 +59,7 @@ export const About: React.FC = () => {
               <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-10 -right-10 glass p-10 rounded-3xl hidden md:block border-primary/20">
-              <div className="text-5xl font-black text-primary mb-2">06</div>
+              <div className="text-5xl font-black text-primary mb-2">07</div>
               <div className="text-zinc-400 uppercase tracking-widest text-xs font-bold">Glorious Seasons</div>
               <div className="mt-4 flex gap-1">
                 {[...Array(5)].map((_, i) => <Star key={i} size={12} className="fill-primary text-primary" />)}

@@ -12,7 +12,7 @@ export const Teams: React.FC = () => {
       
       <Helmet>
         <title>PPL Teams | Parsi & Panjya Premier League Squads</title>
-        <meta name="description" content="View all teams competing in Parsi Premier League Season 6. From Mairwa Super Kings to Bengal Tigers, explore the elite squads." />
+        <meta name="description" content="View all teams competing in Parsi Premier League Season 7. From Mairwa Super Kings to Bengal Tigers, explore the elite squads." />
       </Helmet>
       
       <div className="max-w-7xl mx-auto px-4">
@@ -20,7 +20,7 @@ export const Teams: React.FC = () => {
           <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">The Contenders</div>
           <h1 className="text-6xl md:text-8xl font-black text-white mb-6">ELITE <span className="text-gradient">SQUADS</span></h1>
           <p className="text-zinc-400 max-w-3xl mx-auto text-xl font-light leading-relaxed">
-            Meet the powerhouses of Parsi Premier League Season 6. These teams represent the pinnacle of regional cricket, each with a unique legacy and a hunger for the championship trophy.
+            Meet the powerhouses of Parsi Premier League Season 7. These teams represent the pinnacle of regional cricket, each with a unique legacy and a hunger for the championship trophy.
           </p>
         </div>
 

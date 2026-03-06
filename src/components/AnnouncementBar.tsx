@@ -12,11 +12,11 @@ export const AnnouncementBar: React.FC = () => {
         {[...Array(6)].map((_, i) => (
           <span key={i} className="text-white font-black uppercase tracking-widest text-xs flex items-center gap-4">
             <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            🚀 Parsi & Panjya Premier League Season 6 Registration is now OPEN! 
+            🚀 Parsi & Panjya Premier League Season 7 Registration is now OPEN! 
             <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
             🏏 Join the ultimate cricket battle in Siwan! 
             <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            🏆 Bengal Tigers are the defending champions!
+            🏆 Bengal Tigers are the Season 6 champions!
           </span>
         ))}
       </motion.div>

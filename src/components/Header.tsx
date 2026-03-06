@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
             <span className="text-2xl font-black tracking-tighter text-white leading-none">
               PARSI <span className="text-primary">PREMIER</span>
             </span>
-            <span className="text-[10px] font-bold tracking-[0.4em] text-zinc-500 uppercase">League Season 6</span>
+            <span className="text-[10px] font-bold tracking-[0.4em] text-zinc-500 uppercase">League Season 7</span>
           </div>
         </Link>
 

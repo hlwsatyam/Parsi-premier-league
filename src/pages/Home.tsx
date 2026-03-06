@@ -10,8 +10,8 @@ export const Home: React.FC = () => {
   return (
     <div className="pt-20">
       <Helmet>
-        <title>PPL Season 6 | Parsi & Panjya Premier League Official</title>
-        <meta name="description" content="Welcome to the official home of Parsi Premier League and Panjya Premier League. Register your team for Season 6 and join the elite cricket competition." />
+        <title>PPL Season 7 | Parsi & Panjya Premier League Official</title>
+        <meta name="description" content="Welcome to the official home of Parsi Premier League and Panjya Premier League. Register your team for Season 7 and join the elite cricket competition." />
       </Helmet>
       
       {/* Hero Section */}
@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             className="inline-block bg-white/5 backdrop-blur-md border border-white/10 px-8 py-3 rounded-full mb-10"
           >
-            <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs">Parsi & Panjya Premier League Season 6</span>
+            <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs">Parsi & Panjya Premier League Season 7</span>
           </motion.div>
           
           <motion.h1 
@@ -52,7 +52,7 @@ export const Home: React.FC = () => {
             className="flex flex-wrap justify-center gap-8"
           >
             <Link to="/tournaments" className="bg-linear-to-r from-primary to-secondary text-white px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-[0_0_30px_rgba(242,125,38,0.3)] flex items-center gap-3">
-              Explore Season 6 <ArrowRight size={24} />
+              Explore Season 7 <ArrowRight size={24} />
             </Link>
             <Link to="/contact" className="glass text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white/10 transition-all border-white/20">
               Register Now
@@ -224,8 +224,8 @@ export const Home: React.FC = () => {
       <section className="py-20 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { label: 'Teams', value: '08', icon: Users },
-            { label: 'Seasons', value: '06', icon: Trophy },
+            { label: 'Teams', value: '10', icon: Users },
+            { label: 'Seasons', value: '07', icon: Trophy },
             { label: 'Matches', value: '150+', icon: Calendar },
             { label: 'Stars', value: '500+', icon: Star },
           ].map((stat, i) => (
@@ -251,7 +251,7 @@ export const Home: React.FC = () => {
           <div className="flex justify-between items-end mb-16">
             <div>
               <h2 className="text-5xl font-black text-white mb-4">FEATURED <span className="text-gradient">TEAMS</span></h2>
-              <p className="text-zinc-400">The powerhouses of PPL Season 6</p>
+              <p className="text-zinc-400">The powerhouses of PPL Season 7</p>
             </div>
             <Link to="/teams" className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
               View All Teams <ArrowRight size={20} />
@@ -295,7 +295,7 @@ export const Home: React.FC = () => {
             
             <div className="space-y-6">
               {[
-                { title: 'Team Registration', desc: 'Register your squad for Season 6' },
+                { title: 'Team Registration', desc: 'Register your squad for Season 7' },
                 { title: 'Sponsorship', desc: 'Partner with the biggest league' },
                 { title: 'Live Support', desc: 'Get instant help via WhatsApp' },
               ].map((item, i) => (

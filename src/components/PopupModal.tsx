@@ -45,7 +45,7 @@ export const PopupModal: React.FC = () => {
               <div className="bg-linear-to-br from-primary/20 to-secondary/20 p-8 rounded-[2rem]">
                 <div className="text-center mb-6">
                   <h2 className="text-3xl font-black text-white mb-2">JOIN THE <span className="text-gradient">LEAGUE</span></h2>
-                  <p className="text-zinc-400 text-sm uppercase tracking-widest font-bold">Season 6 Registration is Live!</p>
+                  <p className="text-zinc-400 text-sm uppercase tracking-widest font-bold">Season 7 Registration is Live!</p>
                 </div>
                 <ContactForm className="bg-transparent border-none p-0 shadow-none" />
               </div>
