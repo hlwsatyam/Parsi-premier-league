@@ -8,6 +8,70 @@ export const Sessions: React.FC = () => {
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] -z-10" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary/5 blur-[120px] -z-10" />
       
+
+
+<section className="w-full bg-black py-16 px-6">
+  
+  {/* Header */}
+  <div className="max-w-7xl mx-auto text-center mb-12">
+    <h2 className="text-4xl md:text-5xl font-bold text-white">
+      SESSIONS 7 Performers
+    </h2>
+    <p className="text-zinc-400 mt-4 text-lg">
+      Parsiya Premier League ke outstanding players
+    </p>
+  </div>
+
+  {/* Performers List */}
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+    {/* Card */}
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:scale-105 transition">
+      <h3 className="text-xl font-semibold text-white mb-2">MOST WICKET</h3>
+      <p className="text-zinc-400">Pending</p>
+    </div>
+
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:scale-105 transition">
+      <h3 className="text-xl font-semibold text-white mb-2">MOST SCORE</h3>
+      <p className="text-zinc-400">Pending</p>
+    </div>
+
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:scale-105 transition">
+      <h3 className="text-xl font-semibold text-white mb-2">MOST SIXES</h3>
+      <p className="text-zinc-400">Pending</p>
+    </div>
+
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:scale-105 transition">
+      <h3 className="text-xl font-semibold text-white mb-2">MOST FORTH</h3>
+      <p className="text-zinc-400">Pending</p>
+    </div>
+
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:scale-105 transition">
+      <h3 className="text-xl font-semibold text-white mb-2">MOST CATCH</h3>
+      <p className="text-zinc-400">Pending</p>
+    </div>
+
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:scale-105 transition">
+      <h3 className="text-xl font-semibold text-white mb-2">HIGHTEST SCORE</h3>
+      <p className="text-zinc-400">Pending</p>
+    </div>
+
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:scale-105 transition">
+      <h3 className="text-xl font-semibold text-white mb-2">Emerging Player</h3>
+      <p className="text-zinc-400">Pending</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
           <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Training Grounds</div>
@@ -44,7 +108,7 @@ export const Sessions: React.FC = () => {
                 <p className="text-primary font-bold mb-4">{session.time}</p>
                 <div className="flex gap-6 text-zinc-500 text-sm">
                   <div className="flex items-center gap-2"><Target size={14} /> {session.focus}</div>
-                  <div className="flex items-center gap-2"><MapPin size={14} /> Panjya Ground</div>
+                  <div className="flex items-center gap-2"><MapPin size={14} /> Parsiya Ground</div>
                 </div>
               </div>
             </motion.div>

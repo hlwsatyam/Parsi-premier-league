@@ -1,17 +1,18 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Trophy, Users, Calendar, Star, ArrowRight, Shield, Zap, Target as TargetIcon, MapPin } from 'lucide-react';
+import { Trophy, Users, Calendar, Star, ArrowRight, Shield, Zap, Target as TargetIcon, MapPin, User, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { TEAMS } from '../constants';
 import { ContactForm } from '../components/ContactForm';
+import PPLAbout from '../components/PPLAbout';
 
-export const Home: React.FC = () => {
+export const Home: React.FC = ({isOpen, setIsOpen   }) => {
   return (
     <div className="pt-20">
       <Helmet>
-        <title>PPL Season 7 | Parsi & Panjya Premier League Official</title>
-        <meta name="description" content="Welcome to the official home of Parsi Premier League and Panjya Premier League. Register your team for Season 7 and join the elite cricket competition." />
+        <title>PPL Season 7 | Parsiya Premier League Official</title>
+        <meta name="description" content="Welcome to the official home of Parsiya Premier League and Parsiya Premier League. Register your team for Season 7 and join the elite cricket competition." />
       </Helmet>
       
       {/* Hero Section */}
@@ -20,30 +21,93 @@ export const Home: React.FC = () => {
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-zinc-950/80 to-zinc-950" />
         
         <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-block bg-white/5 backdrop-blur-md border border-white/10 px-8 py-3 rounded-full mb-10"
-          >
-            <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs">Parsi & Panjya Premier League Season 7</span>
-          </motion.div>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter text-white mb-10 leading-[0.85]"
-          >
-            THE <span className="text-gradient">ULTIMATE</span> <br /> CRICKET SAGA
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-zinc-400 mb-14 max-w-3xl mx-auto leading-relaxed font-light"
-          >
-            Witness the grandest stage of cricket in Siwan. Parsi Premier League brings together the finest athletes, the most passionate fans, and an atmosphere that defines excellence.
-          </motion.p>
+      
+ 
+
+
+    <div className="bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center min-h-screen p-5 font-sans">
+      {/* main card – extra attractive with orange border / soft shadow */}
+      <div className="max-w-6xl mx-auto bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl shadow-orange-200/60 p-6 md:p-8 border-2 border-transparent [border-image:linear-gradient(135deg,#fb923c,#ea580c)_1] rounded-2xl hover:scale-[1.02] hover:-translate-y-1 hover:shadow-orange-400/40 transition-all duration-300">
+        {/* flex container */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
+          {/* left text section */}
+          <div className="w-full md:w-1/2 space-y-4">
+            {/* badge for style (orange theme) */}
+            <span className="inline-block bg-orange-500 text-white text-sm font-semibold px-4 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+              🔥 season 7 · live now
+            </span>
+
+            {/* main heading with stronger orange tone & glow */}
+            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
+              <span className="bg-gradient-to-r from-orange-700 via-orange-600 to-amber-600 bg-clip-text text-transparent [text-shadow:0_4px_12px_rgba(255,107,0,0.3)]">
+                PARSIYA PREMIER LEAGUE
+              </span>
+            </h2>
+
+            {/* first paragraph (original text enriched) */}
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg border-l-4 border-orange-400 pl-4 italic">
+          PPL-  Mehboob Ansari is the driving force behind the Parsiya Premier League (PPL). 
+  For the past 7 years, he has been consistently organizing and managing the league 
+  with dedication and passion for cricket in Parsiya, Siwan, Bihar. 
+            </p>
+
+            {/* ADDED: 2 stylish lines that expand the idea with orange vibe */}
+            <div className="bg-orange-50 p-4 rounded-xl border border-orange-200 shadow-inner">
+              <p className="text-orange-800 font-medium flex items-start gap-2">
+                <span className="text-orange-500 text-xl">🏏</span>
+                <span>
+                  <strong className="text-orange-700">
+                    मैदान पर जलवा :
+                  </strong>{" "}
+                  दमदार टीमें, धमाकेदार मुकाबले और चौकों-छक्कों की बारिश – इस
+                  बार PPL और भी खास।
+                </span>
+              </p>
+              <p className="text-orange-800 font-medium flex items-start gap-2 mt-2">
+                <span className="text-orange-500 text-xl">🎟️</span>
+                <span>
+                  <strong className="text-orange-700">
+                    फैंस के लिए ऑफर :
+                  </strong>{" "}
+                  जल्दी बुक करो, धमाकेदार छूट पाओ – हर शॉट पर मिलेगा जोश और
+                  इनाम।
+                </span>
+              </p>
+            </div>
+ 
+          </div>
+
+          {/* right image section (enhanced with frame) */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="relative group">
+              {/* decorative orange blur behind image */}
+              <div className="absolute -inset-2 bg-orange-300 rounded-full blur-xl opacity-40 group-hover:opacity-70 transition duration-500"></div>
+              {/* image with orange tinted shadow */}
+              <img
+                src="https://dynamic.techmintlab.com/uploads/img-to-url/2026/03/12/15.16-739309597056867000.png"
+                alt="Parsiya Premier League official visual"
+                className="relative w-full max-w-md rounded-2xl shadow-2xl border-4 border-white/80 group-hover:border-orange-200 transition-all duration-300"
+              />
+              {/* floating small caption (just for style) */}
+              <div className="absolute -bottom-3 left-5 bg-orange-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                ✦ OFFICIAL ARTWORK ✦
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* end flex */}
+
+        {/* subtle bottom line (orange) */}
+        <div className="w-24 h-1 bg-orange-400 rounded-full mt-8 mx-auto md:mx-0 md:ml-1"></div>
+      </div>{" "}
+      {/* end main card */}
+    </div>
+
+
+
+
+
+
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -54,46 +118,21 @@ export const Home: React.FC = () => {
             <Link to="/tournaments" className="bg-linear-to-r from-primary to-secondary text-white px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-[0_0_30px_rgba(242,125,38,0.3)] flex items-center gap-3">
               Explore Season 7 <ArrowRight size={24} />
             </Link>
-            <Link to="/contact" className="glass text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white/10 transition-all border-white/20">
+            <Link  onClick={() =>setIsOpen(true) } className="glass text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white/10 transition-all !bg-red-400 !border-white/20">
               Register Now
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Why PPL Section */}
-      <section className="py-32 bg-zinc-950/50 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] -z-10" />
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-24">
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-6">WHY <span className="text-gradient">PPL?</span></h2>
-            <p className="text-zinc-500 max-w-2xl mx-auto text-lg">Setting the gold standard for regional cricket tournaments since 2018.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { icon: Shield, title: 'Professional Standards', desc: 'International standard pitch, professional umpiring, and real-time digital scoring for every single match.' },
-              { icon: Zap, title: 'Massive Exposure', desc: 'Live streaming on YouTube and Facebook with professional commentary reaching over 50,000 viewers.' },
-              { icon: TargetIcon, title: 'Talent Scouting', desc: 'A platform where local players get noticed by state-level scouts and professional clubs.' },
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="glass-card p-10 rounded-[2.5rem] text-left"
-              >
-                <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
-                  <item.icon className="text-primary" size={32} />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
+
+
+
+<PPLAbout/>
+
+
+  
       {/* Tournament Format Section */}
       <section className="py-32 relative bg-linear-to-b from-zinc-950 via-zinc-900 to-zinc-950">
         <div className="max-w-7xl mx-auto px-4">
@@ -132,11 +171,11 @@ export const Home: React.FC = () => {
               <div className="space-y-6">
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex justify-between items-center">
                   <span className="text-zinc-400 font-bold uppercase tracking-widest">Winner</span>
-                  <span className="text-3xl font-black text-primary">₹ 51,000</span>
+                  <span className="text-3xl font-black text-primary">to be announced</span>
                 </div>
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex justify-between items-center">
                   <span className="text-zinc-400 font-bold uppercase tracking-widest">Runner Up</span>
-                  <span className="text-3xl font-black text-white">₹ 21,000</span>
+                  <span className="text-3xl font-black text-white">to be announced</span>
                 </div>
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex justify-between items-center">
                   <span className="text-zinc-400 font-bold uppercase tracking-widest">Man of Series</span>
@@ -183,7 +222,7 @@ export const Home: React.FC = () => {
                     <div className="flex items-center gap-8">
                       <div className="text-right">
                         <div className="text-white font-black">{item.time}</div>
-                        <div className="text-zinc-500 text-xs uppercase">Panjya Ground</div>
+                        <div className="text-zinc-500 text-xs uppercase">Parsiya Ground</div>
                       </div>
                       <button className="bg-white/5 text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors">
                         Details
@@ -200,13 +239,13 @@ export const Home: React.FC = () => {
                 <div className="aspect-square rounded-2xl overflow-hidden mb-8">
                   <img 
                     src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=800" 
-                    alt="Panjya Ground" 
+                    alt="Parsiya Ground" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                  <MapPin className="text-secondary" size={24} /> Panjya Ground
+                  <MapPin className="text-secondary" size={24} /> Parsiya Ground
                 </h4>
                 <p className="text-zinc-400 text-sm leading-relaxed mb-8">
                   Our official home ground, featuring a professional turf pitch, modern seating for 5,000+ spectators, and high-intensity floodlights for night matches.
@@ -258,34 +297,97 @@ export const Home: React.FC = () => {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {TEAMS.map((team, i) => (
-              <motion.div 
-                key={team.id}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative"
-              >
-                <div className="aspect-square rounded-3xl overflow-hidden glass mb-6 relative">
-                  <img 
-                    src={team.logo} 
-                    alt={team.name} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                  />
-                  {team.id === 'bengal-tigers' && (
-                    <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                      <Trophy size={10} /> Champion
-                    </div>
-                  )}
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {TEAMS.map((team, i) => (
+          <motion.div
+            key={team.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            whileHover={{ y: -5 }}
+            className="group relative"
+          >
+            {/* Card Glow Effect */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-red-600 rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-300" />
+            
+            {/* Main Card */}
+            <div className="relative bg-gradient-to-br from-orange-950/90 to-red-950/90 backdrop-blur-sm rounded-3xl overflow-hidden border border-orange-500/30 hover:border-orange-500/50 transition-all">
+              
+              {/* Champion Badge */}
+              {team.id === 'bengal-tigers' && (
+                <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-yellow-400 to-amber-500 text-red-900 text-[10px] font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                  <Trophy size={10} /> Champion
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{team.name}</h3>
-                <p className="text-zinc-500 text-sm line-clamp-2">{team.description}</p>
-              </motion.div>
-            ))}
-          </div>
+              )}
+
+              {/* Team Logo Container */}
+              <div className="aspect-square overflow-hidden relative">
+                <div 
+                  className="absolute inset-0 opacity-20"
+                  style={{ backgroundColor: team.color }}
+                />
+                <img
+                  src={team.logo}
+                  alt={team.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                
+                {/* Team Color Indicator */}
+                <div 
+                  className="absolute bottom-0 left-0 right-0 h-1"
+                  style={{ backgroundColor: team.color }}
+                />
+              </div>
+
+              {/* Team Info */}
+              <div className="p-5">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                  <Crown size={18} style={{ color: team.color }} />
+                  {team.name}
+                </h3>
+                
+                <p className="text-zinc-400 text-xs sm:text-sm line-clamp-2 mb-4">
+                  {team.description}
+                </p>
+
+                {/* Owner Section */}
+                <div className="flex items-center gap-3 pt-3 border-t border-orange-500/30">
+                  {/* Owner Photo */}
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 rounded-full blur-sm opacity-50" />
+                    <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-orange-500/50">
+                      <img
+                        src={team.owner.photo}
+                        alt={team.owner.name}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Owner Details */}
+                  <div className="flex-1">
+                    <p className="text-white text-xs sm:text-sm font-bold flex items-center gap-1">
+                      <User size={12} className="text-orange-400" />
+                      {team.owner.name}
+                    </p>
+                    <p className="text-orange-300/60 text-[10px] sm:text-xs flex items-center gap-1">
+                      <Star size={10} />
+                      {team.owner.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
         </div>
       </section>
 

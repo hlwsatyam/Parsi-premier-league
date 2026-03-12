@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
             </span>
           </Link>
           <p className="text-zinc-400 leading-relaxed">
-            Panjya Premier League is the premier cricket tournament in Siwan, bringing together the best talent and the most passionate fans.
+            Parsiya Premier League is the premier cricket tournament in Siwan, bringing together the best talent and the most passionate fans.
           </p>
           <div className="flex gap-4">
             {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 mt-20 pt-10 border-t border-white/5 text-center text-zinc-500 text-sm">
-        <p>© {new Date().getFullYear()} Panjya Premier League. Organized by {CONTACT_INFO.organizers.join(' & ')}.</p>
+        <p>© {new Date().getFullYear()} Parsiya Premier League. Organized by {CONTACT_INFO.organizers.join(' & ')}.</p>
       </div>
     </footer>
   );

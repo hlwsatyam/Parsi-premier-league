@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { FloatingButtons } from './components/FloatingButtons';
@@ -25,6 +25,9 @@ function ScrollToTop() {
 }
 
 export default function App() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Router>
       <ScrollToTop />
@@ -34,7 +37,7 @@ export default function App() {
         
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home   isOpen={isOpen} setIsOpen={setIsOpen} />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/tournaments" element={<Tournaments />} />
             <Route path="/sessions" element={<Sessions />} />
@@ -51,7 +54,7 @@ export default function App() {
 
         <Footer />
         <FloatingButtons />
-        <PopupModal />
+        <PopupModal  isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </Router>
   );

@@ -11,8 +11,8 @@ export const Tournaments: React.FC = () => {
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-secondary/5 blur-[100px] -z-10" />
       
       <Helmet>
-        <title>PPL Tournaments | Parsi & Panjya Premier League History</title>
-        <meta name="description" content="Explore the history of Parsi Premier League tournaments. From Season 1 to the upcoming Season 7, see the winners and highlights." />
+        <title>PPL Tournaments | Parsiya Premier League History</title>
+        <meta name="description" content="Explore the history of Parsiya Premier League tournaments. From Season 1 to the upcoming Season 7, see the winners and highlights." />
       </Helmet>
       
       <div className="max-w-7xl mx-auto px-4">
@@ -20,7 +20,7 @@ export const Tournaments: React.FC = () => {
           <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Tournament Archive</div>
           <h1 className="text-6xl md:text-8xl font-black text-white mb-6">THE <span className="text-gradient">LEGACY</span></h1>
           <p className="text-zinc-400 max-w-3xl mx-auto text-xl font-light leading-relaxed">
-            Relive the glory of past seasons and prepare for the upcoming battle in Season 7. Parsi Premier League has been the stage for incredible cricket since its inception.
+            Relive the glory of past seasons and prepare for the upcoming battle in Season 7. Parsiya Premier League has been the stage for incredible cricket since its inception.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export const Tournaments: React.FC = () => {
                   </div>
                   <div>
                     <div className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-2">Venue</div>
-                    <div className="text-white font-bold text-xl">Panjya Ground</div>
+                    <div className="text-white font-bold text-xl">Parsiya Ground</div>
                   </div>
                 </div>
               </div>
@@ -66,24 +66,7 @@ export const Tournaments: React.FC = () => {
           ))}
         </div>
 
-        {/* Hall of Fame Section */}
-        <section className="py-20 bg-zinc-900/50 rounded-[3rem] p-12 border border-white/5 relative overflow-hidden">
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 blur-[100px]" />
-          <h2 className="text-4xl font-black text-white mb-12 text-center">HALL OF <span className="text-gradient">FAME</span></h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { year: '2023', winner: 'Bengal Tigers', mvp: 'Rahul Kumar' },
-              { year: '2022', winner: 'Star XI', mvp: 'Amit Singh' },
-              { year: '2021', winner: 'Mairwa Super Kings', mvp: 'Sanjay Yadav' },
-            ].map((item, i) => (
-              <div key={i} className="glass p-8 rounded-2xl text-center">
-                <div className="text-primary font-black text-2xl mb-2">{item.year}</div>
-                <div className="text-white font-bold text-lg mb-1">{item.winner}</div>
-                <div className="text-zinc-500 text-xs uppercase tracking-widest">MVP: {item.mvp}</div>
-              </div>
-            ))}
-          </div>
-        </section>
+ 
       </div>
     </div>
   );

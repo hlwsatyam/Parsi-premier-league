@@ -19,19 +19,19 @@ export const Stats: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
           {[
             { title: 'Top Run Scorers', icon: TrendingUp, players: [
-              { name: 'Rahul Kumar', team: 'Bengal Tigers', value: '450 Runs' },
-              { name: 'Amit Singh', team: 'Star XI', value: '412 Runs' },
-              { name: 'Sanjay Yadav', team: 'Mairwa Super Kings', value: '385 Runs' },
+              { name: 'Gulam Ali', team: 'Mairwa super kings', value: '450 Runs' },
+              { name: 'Anshu Yadav', team: 'Mairwa super kings', value: '370 Runs' },
+              { name: 'Shailesh Yadav', team: 'Mairwa Super Kings', value: '290 Runs' },
             ]},
             { title: 'Leading Wicket Takers', icon: Target, players: [
-              { name: 'Vikash Anand', team: 'Siwan Knight Riders', value: '18 Wickets' },
-              { name: 'Deepak Raj', team: 'Bengal Tigers', value: '15 Wickets' },
-              { name: 'Manoj Kumar', team: 'Star XI', value: '14 Wickets' },
+              { name: 'Arif Khan', team: 'Bangal Tigers', value: '18 Wickets' },
+              { name: 'Gulam Ali', team: 'Mairwa super kings', value: '15 Wickets' },
+              { name: 'Kamal Ansari', team: 'Star XI', value: '14 Wickets' },
             ]},
             { title: 'Most Valuable Players', icon: Award, players: [
-              { name: 'Rahul Kumar', team: 'Bengal Tigers', value: '9.5 Rating' },
-              { name: 'Vikash Anand', team: 'Siwan Knight Riders', value: '9.2 Rating' },
-              { name: 'Amit Singh', team: 'Star XI', value: '8.9 Rating' },
+              { name: 'Kamal Ansari', team: 'Star-Xi', value: '9.5 Rating' },
+              { name: 'Golu Pandey', team: 'Bengal Tigers', value: '9.2 Rating' },
+              { name: 'Aashik Ansari', team: 'Siwan Knight riders', value: '8.9 Rating' },
             ]},
           ].map((category, i) => (
             <motion.div
@@ -66,10 +66,10 @@ export const Stats: React.FC = () => {
           <h2 className="text-4xl font-black text-white mb-12 text-center">RECORD <span className="text-gradient">BREAKERS</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: 'Highest Score', value: '124*', player: 'Rahul Kumar', year: '2023' },
-              { title: 'Best Bowling', value: '6/12', player: 'Vikash Anand', year: '2022' },
-              { title: 'Fastest 50', value: '14 Balls', player: 'Amit Singh', year: '2023' },
-              { title: 'Most 6s', value: '42', player: 'Sanjay Yadav', year: 'Career' },
+              { title: 'Highest Score', value: '124*', player: 'Gulam Ali', year: '2023' },
+              { title: 'Best Bowling', value: '4/35', player: 'Firoz RAHMAN', year: '2022' },
+              { title: 'Fastest 50', value: '16 Balls', player: 'Golu Pandey', year: '2024' },
+              { title: 'Most Wicket ', value: '32', player: 'Firoz RAHMAN', year: 'Wicket' },
             ].map((record, i) => (
               <div key={i} className="glass p-8 rounded-2xl text-center">
                 <div className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest mb-2">{record.title}</div>

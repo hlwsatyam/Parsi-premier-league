@@ -11,8 +11,8 @@ export const About: React.FC = () => {
       <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-secondary/5 blur-[150px] -z-10" />
       
       <Helmet>
-        <title>About PPL | History of Parsi & Panjya Premier League</title>
-        <meta name="description" content="Discover the history, mission, and values of Parsi Premier League. Learn how we became the leading cricket tournament in Bihar." />
+        <title>About PPL | History of Parsiya Premier League</title>
+        <meta name="description" content="Discover the history, mission, and values of Parsiya Premier League. Learn how we became the leading cricket tournament in Bihar." />
       </Helmet>
       
       <div className="max-w-7xl mx-auto px-4">
@@ -23,13 +23,17 @@ export const About: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Our Story</div>
-            <h1 className="text-6xl md:text-7xl font-black text-white mb-8 leading-tight">THE <span className="text-gradient">LEGACY</span> OF PARSI PREMIER LEAGUE</h1>
-            <p className="text-zinc-400 text-xl leading-relaxed mb-8 font-light">
-              Founded in 2018 with a vision to revolutionize regional cricket, the Parsi Premier League (PPL) has emerged as a beacon of sporting excellence in Siwan, Bihar. What began as a community initiative has transformed into a high-stakes professional tournament.
-            </p>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-              Our mission is to bridge the gap between street cricket and professional leagues. We provide a platform where raw talent meets professional infrastructure, giving every player a chance to showcase their skills under the spotlight.
-            </p>
+            <h1 className="text-6xl md:text-7xl font-black text-white mb-8 leading-tight">THE <span className="text-gradient">LEGACY</span> OF Parsiya PREMIER LEAGUE</h1>
+           <p className="text-zinc-400 text-xl leading-relaxed mb-8 font-light">
+  Mehboob Ansari is the driving force behind the Parsiya Premier League (PPL). 
+  For the past 7 years, he has been consistently organizing and managing the league 
+  with dedication and passion for cricket in Parsiya, Siwan, Bihar. 
+</p>
+
+<p className="text-zinc-400 text-lg leading-relaxed mb-8">
+  Under his leadership, PPL has grown into a platform that connects passionate cricketers 
+  with competitive opportunities.  
+</p>
             
             <div className="grid grid-cols-2 gap-8">
               <div className="glass p-6 rounded-2xl">
@@ -51,7 +55,7 @@ export const About: React.FC = () => {
           >
             <div className="aspect-square rounded-[3rem] overflow-hidden glass relative group">
               <img 
-                src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=1000" 
+                src="https://dynamic.techmintlab.com/uploads/img-to-url/2026/03/12/15.20-197879327425282050.png" 
                 alt="PPL Cricket Stadium" 
                 className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -106,7 +110,7 @@ export const About: React.FC = () => {
           {[
             { icon: Trophy, title: 'Excellence', desc: 'Striving for the highest standards in every match, from umpiring to ground maintenance.' },
             { icon: Target, title: 'Vision', desc: 'Empowering local talent to reach national stages through professional coaching and exposure.' },
-            { icon: Heart, title: 'Community', desc: 'Built by the villagers of Panjya, for the cricket lovers of the entire Siwan region.' },
+            { icon: Heart, title: 'Community', desc: 'Built by the villagers of Parsiya, for the cricket lovers of the entire Siwan region.' },
             { icon: Shield, title: 'Integrity', desc: 'Fair play and sportsmanship are our core values, ensuring a clean and competitive environment.' },
           ].map((item, i) => (
             <motion.div
